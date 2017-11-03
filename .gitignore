@@ -1,0 +1,16 @@
+# OS Generated files
+.DS_Store
+*.log
+
+
+# Imported Packages
+node_modules/
+
+
+# IDE
+.idea
+.vscode
+
+
+# reports
+reports/
