@@ -20,19 +20,25 @@ const cucumberReporteroptions = {
 };
 
 class Reporter {
+
   static createDirectory(dirName) {
+    //Check if the directory exist
     if (!fs.existsSync(dirName)) {
       mkdirp.sync(dirName);
     }
-  }
+    }
 
   static createHTMLReport() {
+
     try {
-      reporter.generate(cucumberReporteroptions);
+      reporter.generate(cucumberReporteroptions); //invoke cucumber-html-reporter
       report
         .create(cucumberReportOptions)
         .then(function() {
-          console.log("cucumber_report.html criado com sucesso!");
+          //invoke cucumber-html-report
+          // creating two reports(optional) here, cucumber-html-report gives directory already exists as cucumber-html-reporter already creates the html dir!
+          // suggestion- use either one of the reports based on your needs
+          console.log("cucumber_report.html created successfully!");
         })
         .catch(function(err) {
           if (err) {
@@ -41,10 +47,24 @@ class Reporter {
         });
     } catch (err) {
       if (err) {
-        console.log("Falha ao criar o arquivo json com os resultados do cucumber");
+        console.log("Failed to save cucumber test results to json file.");
         console.log(err);
       }
     }
+  }
+
+  /**
+   * Allure reports method, would work only with cucumber 1.3.x & less versions
+   * Currently incompatible with latest cucumber 3.x version
+   */
+
+  static createAllureXML() {
+    const allureReporter = require("cucumberjs-allure-reporter");
+    const xmlReports = process.cwd() + "/reports/xml";
+    Reporter.createDirectory(xmlReports);
+    allureReporter.config({
+      targetDir: xmlReports
+    })
   }
 }
 module.exports = Reporter;
