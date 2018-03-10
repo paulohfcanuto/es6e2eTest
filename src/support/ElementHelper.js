@@ -1,9 +1,7 @@
 import { browser } from 'protractor';
 
 const EC = browser.ExpectedConditions;
-/*
-This class assists in waiting for non-angular page screen elements
- */
+
 class ElementHelper {
 	waitForPresent(ele) {
 		return browser.wait(EC.presenceOf(ele));

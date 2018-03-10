@@ -1,28 +1,38 @@
 {
   "name": "es6e2eTest",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "ISC",
   "description": "E2E tests written in es6 with protractor chai and cucumber",
-  "main": "config/config.js",
+  "main": "src/config/google.search.config.js",
+  "keywords": [
+    "testing",
+    "bdd",
+    "cucumber",
+    "gherkin",
+    "tests",
+    "protractor",
+    "chai",
+    "E2E"
+  ],
   "scripts": {
     "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start",
-    "test": "protractor config/config.js",
-    "debug": "protractor debug config/config.js"
+    "google-search": "protractor src/config/google.search.config.js"
   },
-  "author": "Paulo Henrique Fernandes Canuto",
+  "contributors": [
+    "Paulo Henrique Fernandes Canuto <paulohfcanuto@gmail.com>"
+  ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "cucumber": "^3.1.0",
-    "cucumber-html-report": "^0.6.2",
-    "cucumber-html-reporter": "^3.0.4",
+    "cucumber": "^4.0.0",
+    "cucumber-html-reporter": "^4.0.2",
     "mkdirp": "^0.5.1",
-    "protractor": "^5.2.0",
-    "protractor-cucumber-framework": "^4.1.1",
+    "protractor": "^5.3.0",
+    "protractor-cucumber-framework": "^4.2.0",
     "selenium-webdriver": "^3.6.0"
   }
 }
