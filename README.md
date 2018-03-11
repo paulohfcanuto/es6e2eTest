@@ -19,7 +19,7 @@ yarn run webdriver-start
 
 ### Executar os testes:
 ```sh
-yarn run test-acesso
+yarn run google-search
 ```
 
 ### Debugando um Teste
