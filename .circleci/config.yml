@@ -28,6 +28,7 @@ jobs:
 
       - run: yarn install
       - run: curl -L -o google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      - run: sudo apt-get install -f
       - run: sudo dpkg -i google-chrome.deb
       - run: sleep 3
       - run: yarn webdriver-update
