@@ -24,7 +24,7 @@ yarn run google-search
 ```
 
 ### Debugando um Teste
-Para debugando, coloque um 'debugger;' no código
+Para depurar um teste, coloque um 'debugger;' no código
 ```javascript
 When(/^I type cucumber/, () => {
   debugger;
@@ -33,7 +33,7 @@ When(/^I type cucumber/, () => {
 ```
 Após isso, o "inspect-brk" deve ser utilizado para iniciar o teste, ficando
 ```
-    node --inspect-brk bin/protractor <config_file>
+    node --inspect-brk={porta} bin/protractor <config_file>
 ```
 OBS: Com Node.js 8+ não é possível utilizar browser.debugger() e browser.pause();
 Para mais informações deve ser consultada a [doc](http://www.protractortest.org/#/debugging)
