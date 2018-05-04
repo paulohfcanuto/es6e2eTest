@@ -5,3 +5,5 @@
 - Matar a sessão do chormedriver se um teste falhar ou não achar um elemento de tela;
 - Criar um esqueleto do projeto;
 - avaliar o uso de TS;
+https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin
+https://github.com/wswebcreation/multiple-cucumber-html-reporter
