@@ -30,9 +30,17 @@ const cucumberReporteroptions = {
 exports.config = {
   seleniumAddress: "http://localhost:4444/wd/hub",
   baseUrl: "https://www.google.com/ncr",
-  capabilities: {
+  /*capabilities: {
     browserName: "chrome"
-  },
+  }*/
+  multiCapabilities: [
+    {
+      browserName: 'chrome',
+      chromeOptions: {
+        args: ['--headless', '--disable-gpu', '--window-size=1440,900', '--disable-infobars', 'disable-extensions', 'start-maximized']
+      }
+    }
+  ],
   framework: "custom",
   frameworkPath: require.resolve("protractor-cucumber-framework"),
   specs: [`${rootDir}/src/features/google.search.feature`],
