@@ -7,9 +7,9 @@ BeforeAll({timeout: -1}, function() {
 });
 
 After(function() {
-  const attach = this.attach;
+  /*const attach = this.attach;
   return browser.takeScreenshot().then(function(png) {
     const decodedImage = new Buffer(png, "base64");
     attach(decodedImage, "image/png");
-  });
+  });*/
 });
