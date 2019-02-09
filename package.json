@@ -1,5 +1,5 @@
 {
-  "name": "es6e2eTest",
+  "name": "es6e2etest",
   "version": "1.0.0",
   "license": "ISC",
   "description": "E2E tests written in es6 with protractor chai and cucumber",

@@ -29,7 +29,8 @@ const cucumberReporteroptions = {
 
 exports.config = {
   ignoreUncaughtExceptions: true,
-  seleniumAddress: "http://localhost:4444/wd/hub",
+  //seleniumAddress: "http://localhost:4444/wd/hub",
+  seleniumAddress: "http://selenium__standalone-chrome:4444/wd/hub/",
   baseUrl: "https://www.google.com/ncr",
   capabilities: {
     browserName: 'chrome',
@@ -37,19 +38,10 @@ exports.config = {
         args: ['--headless', '--disable-gpu', '--window-size=1440,900', '--disable-infobars', 'disable-extensions', 'start-maximized']
       }
   },
-  /*multiCapabilities: [
-    {
-      browserName: 'chrome',
-      chromeOptions: {
-        args: ['--headless', '--disable-gpu', '--window-size=1440,900', '--disable-infobars', 'disable-extensions', 'start-maximized']
-      }
-    }
-  ]*/,
   framework: "custom",
   frameworkPath: require.resolve("protractor-cucumber-framework"),
   specs: [`${rootDir}/src/features/google.search.feature`],
   cucumberOpts: {
-    
     strict: true,
     format: [
       `json:${reportLocation.jsonReport}`,

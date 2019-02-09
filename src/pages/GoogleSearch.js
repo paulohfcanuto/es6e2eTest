@@ -1,6 +1,6 @@
 class GoogleSearch{
 	constructor(){
-		this.searchTextBox = element(by.id("lst-ib"));
+		this.searchTextBox = element(by.css(".gLFyf.gsfi"));
   }
 }
 

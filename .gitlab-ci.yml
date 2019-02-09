@@ -1,0 +1,14 @@
+image: node:8.14.1
+
+services:
+  - selenium/standalone-chrome:latest
+
+before_script:
+  - npm install
+
+test:
+  artifacts:
+    paths:
+      - /builds/paulohfcanuto/es6e2eTest/reports/google/search/html/*.html
+  script:
+    - npm run google-search

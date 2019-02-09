@@ -1,4 +1,3 @@
-[![CircleCI Status](https://circleci.com/gh/paulohfcanuto/es6e2eTest.svg?style=shield)](https://circleci.com/gh/paulohfcanuto/es6e2eTest)
 ### Dependências:
 ```sh
 npm install yarn -g
